@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, Component } from "react";
+import "./w3.css";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import DevicesDetailContainer from "./Components/Devices/Detail/Container";
+import DevicesListContainer from "./Components/Devices/List/Container";
+import ProductsDetailContainer from "./Components/Products/Detail/Container";
+import ProductsListContainer from "./Components/Products/List/Container";
+import DashboardContainer from "./Components/Dashboard/Container";
+import RegisterSuccessContainer from "./Components/Gateway/RegisterSuccessContainer";
+import RegisterContainerComponent from "./Components/Gateway/RegisterContainerComponent";
+import LogoutContainer from "./Components/Gateway/LogoutContainer";
+import LoginContainerComponent from "./Components/Gateway/LoginContainerComponent";
+import IndexContainerComponent from "./Components/Gateway/IndexContainerComponent";
+import NotFoundPage from "./Components/Misc/NotFoundPage";
+import MobileTabletNavigationContainer from "./Components/Misc/MobileTabletNavigationContainer";
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+
+    render() {
+        return (
+            <>
+                <Router>
+                    <Routes>
+                        <Route exact path="/device/:id" element={<DevicesDetailContainer/>}/>
+                        <Route exact path="/devices" element={<DevicesListContainer/>}/>
+                        <Route exact path="/product/:id" element={<ProductsDetailContainer/>}/>
+                        <Route exact path="/products" element={<ProductsListContainer/>}/>
+                        <Route exact path="/dashboard" element={<DashboardContainer/>}/>
+                        <Route exact path="/register-success" element={<RegisterSuccessContainer/>}/>
+                        <Route exact path="/register" element={<RegisterContainerComponent/>}/>
+                        <Route exact path="/login" element={<LoginContainerComponent/>}/>
+                        <Route exact path="/logout" element={<LogoutContainer/>}/>
+                        <Route exact path="/" element={<IndexContainerComponent/>}/>
+                        <Route path="*" element={<NotFoundPage/>}/>
+                    </Routes>
+                    <div>
+                        <MobileTabletNavigationContainer />
+                    </div>
+                </Router>
+
+            </>
+        );
+    }
 }
 
 export default App;
