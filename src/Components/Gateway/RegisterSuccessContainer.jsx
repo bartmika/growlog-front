@@ -10,7 +10,7 @@ class RegisterSuccessContainer extends Component {
 
     render() {
         return (
-            <h1>Register</h1>
+            <h1>Register TODO 4</h1>
         );
     }
 }

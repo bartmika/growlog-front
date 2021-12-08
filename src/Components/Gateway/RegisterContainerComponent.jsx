@@ -16,10 +16,10 @@ class RegisterContainerComponent extends Component {
     render() {
         return (
             <>
-                <div className="w3-hide-medium w3-hide-small">
-                    <h1>Unsupported for Desktop</h1>
+                <div className="w3-hide-small">
+                    <h1>TODO #3: Unsupported for Desktop or tablet</h1>
                 </div>
-                <div className="w3-hide-large">
+                <div className="w3-hide-large w3-hide-medium">
                     <div className="w3-container w3-margin w3-padding w3-center">
                         <Link to="/">
                             <img src="/img/logo.png" style={{width:"60%"}}/>

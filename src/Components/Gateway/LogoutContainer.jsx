@@ -18,7 +18,7 @@ class LogoutContainer extends Component {
 
     render() {
         return (
-            <h1>Logout Redirector</h1>
+            <h1>Logout Redirector TODO 5</h1>
         );
     }
 }
