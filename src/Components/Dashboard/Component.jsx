@@ -4,12 +4,7 @@ export default function DashboardComponent(props) {
     return (
         <>
             {/* TOP NAVIGATION */}
-            <div className="w3-teal w3-top w3-hide-small w3-hide-medium" >
-                <div className="w3-display-container">
-                    {/*  <img src="/img/compressed-logo.png" alt="Logo" style={{width:"15%"}} /> */}
-                </div>
-            </div>
-            <div className="w3-teal w3-top w3-hide-large" >
+            <div className="w3-teal w3-hide-large" >
                 <div className="w3-row">
                     <div className="w3-col s4 w3-container ">
                         {/*<Link to="/items/search" className="w3-left" style={{ textDecoration: "none"}}>
@@ -23,6 +18,90 @@ export default function DashboardComponent(props) {
                     </div>
                     <div className="w3-col s4 w3-container ">
 
+                    </div>
+                </div>
+            </div>
+
+            {/* FIRST ROW */}
+            <div class="w3-row">
+
+                {/* GOOD */}
+                <div className="w3-col m6 w3-panel">
+                    <div className="w3-border w3-border-black w3-card-4">
+                        <div className="w3-container w3-grey w3-border-bottom w3-border-black">
+                            <h5>Mulberry Tree (#1)</h5>
+                        </div>
+                        <div className="w3-container w3-white">
+                            <p><strong>Product Status:</strong> <span className="w3-text-green">Good</span></p>
+                            <p><strong>Device Status:</strong> <span className="w3-text-green">Running</span></p>
+                            <p><strong>Last Update:</strong> 25 minutes ago</p>
+                            <p><strong>Growth Week:</strong> 3</p>
+                            <p><strong>Pending Task:</strong> <Link to="/" style={{textDecoration: "none",}} target="_blank">Weekly Inspection&nbsp;<i className="fa fa-external-link"></i></Link></p>
+                        </div>
+                        <div className="w3-container w3-margin-bottom w3-white">
+                            <Link to={`/product/1`} className="w3-btn w3-blue w3-block">View&nbsp;<i className="fa fa-chevron-right"></i></Link>
+                        </div>
+                    </div>
+                </div>
+
+                {/* DEVICE ERROR */}
+                <div className="w3-col m6 w3-panel">
+                    <div className="w3-border w3-border-black w3-card-4">
+                        <div className="w3-container w3-grey w3-border-bottom w3-border-black">
+                            <h5>Mulberry Tree (#2)</h5>
+                        </div>
+                        <div className="w3-container w3-white">
+                            <p><strong>Product Status:</strong> <span className="w3-text-grey">Neutral</span></p>
+                            <p><strong>Device Status:</strong> <span className="w3-text-red">Error</span></p>
+                            <p><strong>Last Update:</strong> 1 hour ago</p>
+                            <p><strong>Growth Week:</strong> 3</p>
+                            <p><strong>Pending Task:</strong> -</p>
+                        </div>
+                        <div className="w3-container w3-margin-bottom w3-white">
+                            <Link to={`/product/1`} className="w3-btn w3-blue w3-block">View&nbsp;<i className="fa fa-chevron-right"></i></Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Second ROW */}
+            <div class="w3-row">
+
+                {/* GOOD */}
+                <div className="w3-col m6 w3-panel">
+                    <div className="w3-border w3-border-black w3-card-4">
+                        <div className="w3-container w3-grey w3-border-bottom w3-border-black">
+                            <h5>Mulberry Tree (#3)</h5>
+                        </div>
+                        <div className="w3-container w3-white">
+                            <p><strong>Product Status:</strong> <span className="w3-text-green">Good</span></p>
+                            <p><strong>Device Status:</strong> <span className="w3-text-green">Running</span></p>
+                            <p><strong>Last Update:</strong> 25 minutes ago</p>
+                            <p><strong>Growth Week:</strong> 3</p>
+                            <p><strong>Pending Task:</strong> -</p>
+                        </div>
+                        <div className="w3-container w3-margin-bottom w3-white">
+                            <Link to={`/product/1`} className="w3-btn w3-blue w3-block">View&nbsp;<i className="fa fa-chevron-right"></i></Link>
+                        </div>
+                    </div>
+                </div>
+
+                {/* DEVICE ERROR */}
+                <div className="w3-col m6 w3-panel">
+                    <div className="w3-border w3-border-black w3-card-4">
+                        <div className="w3-container w3-grey w3-border-bottom w3-border-black">
+                            <h5>Mulberry Tree (#4)</h5>
+                        </div>
+                        <div className="w3-container w3-white">
+                            <p><strong>Product Status:</strong> <span className="w3-text-grey">Neutral</span></p>
+                            <p><strong>Device Status:</strong> <span className="w3-text-red">Error</span></p>
+                            <p><strong>Last Update:</strong> 1 hour ago</p>
+                            <p><strong>Growth Week:</strong> 3</p>
+                            <p><strong>Pending Task:</strong> -</p>
+                        </div>
+                        <div className="w3-container w3-margin-bottom w3-white">
+                            <Link to={`/product/1`} className="w3-btn w3-blue w3-block">View&nbsp;<i className="fa fa-chevron-right"></i></Link>
+                        </div>
                     </div>
                 </div>
             </div>
