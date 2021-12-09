@@ -11,7 +11,7 @@ import DevicesDetailContainer from "./Components/Devices/Detail/Container";
 import DevicesListContainer from "./Components/Devices/List/Container";
 import ProductsDetailContainer from "./Components/Products/Detail/Container";
 import ProductsListContainer from "./Components/Products/List/Container";
-import ProductCreatePage1ContainerComponent from "./Components/Products/Create/Page1";
+import ProductCreateStepOnePage from "./Components/Products/Create/StepOnePage";
 import DashboardContainer from "./Components/Dashboard/Container";
 import RegisterSuccessContainer from "./Components/Gateway/RegisterSuccessContainer";
 import RegisterContainerComponent from "./Components/Gateway/RegisterContainerComponent";
@@ -35,7 +35,7 @@ class App extends Component {
                         <Route exact path="/device/:id" element={<DevicesDetailContainer/>}/>
                         <Route exact path="/devices" element={<DevicesListContainer/>}/>
                         <Route exact path="/product/:id" element={<ProductsDetailContainer/>}/>
-                        <Route exact path="/products/add-1" element={<ProductCreatePage1ContainerComponent/>}/>
+                        <Route exact path="/products/add-1" element={<ProductCreateStepOnePage/>}/>
                         <Route exact path="/products" element={<ProductsListContainer/>}/>
                         <Route exact path="/dashboard" element={<DashboardContainer/>}/>
                         <Route exact path="/register-success" element={<RegisterSuccessContainer/>}/>
