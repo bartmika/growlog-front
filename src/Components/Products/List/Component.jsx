@@ -1,12 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function ProductsListComponent(props) {
-    var d = new Date();
-    d.setDate(d.getDate() - 1);
-    console.log(d);
-
-    var d = new Date().setDate(new Date().getDate() - 1);
-    console.log(d);
     return (
         <>
             <div className="w3-hide-small">
@@ -14,11 +8,6 @@ export default function ProductsListComponent(props) {
             </div>
             <div className="w3-hide-large w3-hide-medium">
                 {/* TOP NAVIGATION */}
-                <div className="w3-teal w3-hide-small w3-hide-medium" >
-                    <div className="w3-display-container">
-                        {/*  <img src="/img/compressed-logo.png" alt="Logo" style={{width:"15%"}} /> */}
-                    </div>
-                </div>
                 <div className="w3-teal w3-hide-large" >
                     <div className="w3-row">
                         <div className="w3-col s4 w3-container ">
@@ -32,69 +21,69 @@ export default function ProductsListComponent(props) {
                             <h4>Products</h4>
                         </div>
                         <div className="w3-col s4 w3-container ">
-
+                            <Link to="/products/add-1" className="w3-right" style={{ textDecoration: "none"}}>
+                                <h4>
+                                    <i className="fa fa-plus"></i>&nbsp;Add
+                                </h4>
+                            </Link>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <ul className="w3-ul w3-white">
-                        {/* WITH THUMBNAIL */}
-                        <li className="w3-row">
-                            <div className="w3-col s4 w3-container">
-                                <img src="/img/placeholder.png" className="w3-image" style={{width:"100%"}}/>
-                            </div>
-                            <div className="w3-col s4 w3-container">
-                                <h3><strong>Mulberry Tree (#1)</strong></h3>
-                                <div className="w3-text-gray">
-                                    <p><strong>Product Status:</strong> <span className="w3-text-green">Good</span></p>
-                                    <p><strong>Growth Week:</strong> 3</p>
-                                </div>
-                            </div>
-                            <div className="w3-col s4 w3-container w3-display-container">
-                                <img src="/img/placeholder.png" className="w3-image" style={{width:"100%", opacity:0}}/>
-                                <span className="w3-display-right w3-text-gray"><i className="fa fa-chevron-right"></i></span>
-                            </div>
-                        </li>
 
-                        {/* WITHOUT THUMBNAIL */}
-                        <li className="w3-row">
-                            <div className="w3-col s8 w3-container">
-                                <h3><strong>Mulberry Tree (#2)</strong></h3>
-                                <div className="w3-text-gray">
-                                    <p><strong>Product Status:</strong> <span className="w3-text-green">Good</span></p>
-                                    <p><strong>Growth Week:</strong> 3</p>
-                                </div>
-                            </div>
-                            <div className="w3-col s4 w3-container w3-display-container">
-                                <img src="/img/placeholder.png" className="w3-image" style={{width:"100%", opacity:0}}/>
-                                <span className="w3-display-right w3-text-gray"><i className="fa fa-chevron-right"></i></span>
-                            </div>
-                        </li>
-
-                        {/* WITH THUMBNAIL BUT WITH ERROR */}
-                        <li className="w3-row">
-                            <div className="w3-col s4 w3-container">
-                                <img src="/img/placeholder.png" className="w3-image" style={{width:"100%"}}/>
-                            </div>
-                            <div className="w3-col s4 w3-container">
-                                <h3><strong>Mulberry Tree (#1)</strong></h3>
-                                <div className="w3-text-gray">
-                                    <p><strong>Product Status:</strong> <span className="w3-text-red">Critical</span></p>
-                                    <p><strong>Growth Week:</strong> 3</p>
-                                </div>
-                            </div>
-                            <div className="w3-col s4 w3-container w3-display-container">
-                                <img src="/img/placeholder.png" className="w3-image" style={{width:"100%", opacity:0}}/>
-                                <span className="w3-display-right w3-text-gray"><i className="fa fa-chevron-right"></i></span>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                    <br />
-                    <br />
-                    <br />
+                {/* HERE IS AN EXAMPLE OF A BATCH */}
+                {/*
+                <div className="w3-container w3-grey w3-cell-row">
+                    <div className="w3-cell w3-cell-left">
+                        <h4><strong>Fall Batch 2021</strong></h4>
+                    </div>
+                    <div className="w3-cell w3-cell-right">
+                        <i className="fa fa-caret-down w3-text-grey"></i>
+                    </div>
                 </div>
+                <div className="w3-light-grey w3-bar w3-bar-block">
+                    <button className="w3-bar-item w3-btn w3-border-bottom w3-mobile">
+                        <i className="fa fa-plus"></i>&nbsp;Add Production
+                    </button>
+                    <button className="w3-bar-item w3-btn w3-border-bottom w3-mobile">
+                        <i className="fa fa-edit"></i>&nbsp;Edit
+                    </button>
+                    <button className="w3-bar-item w3-btn w3-border-bottom w3-mobile">
+                        <i className="fa fa-trash"></i>&nbsp;Terminate
+                    </button>
+                    <button className="w3-bar-item w3-btn w3-border-bottom w3-mobile">
+                        <i className="fa fa-tasks"></i>&nbsp;View Pending Tasks
+                    </button>
+                </div>
+                */}
+
+                <ul className="w3-ul">
+                    {/* Good Record Example */}
+                    <li className="w3-cell-row w3-border-bottom" style={{padding:"0px",}}>
+                        <div className="w3-white w3-cell w3-container">
+                            <h3>Mulberry Tree (#1)</h3>
+                            <p className="w3-text-grey"><strong>Plant:</strong> Tree</p>
+                            <p className="w3-text-grey"><strong>Pending:</strong> None</p>
+                            <p className="w3-text-grey"><strong>Week:</strong> 1</p>
+                            </div>
+                        <div className="w3-cell w3-cell-middle w3-white" style={{padding:"0px",}}>
+                            <i className="fa fa-chevron-right w3-text-grey"></i>
+                        </div>
+                    </li>
+
+                    {/* With Thumbnail */}
+                    <li className="w3-cell-row w3-border-bottom" style={{padding:"0px",}}>
+                        <div className="w3-white w3-cell w3-container">
+                            <h2>Mulberry Tree (#3)</h2>
+                            <p><strong>Status:</strong> Problem</p>
+                            <p><strong>Pending:</strong> None</p>
+                            <p><strong>Week:</strong> 1</p>
+                            <p><strong>Last Update:</strong> 15 minutes ago</p>
+                            </div>
+                        <div className="w3-cell w3-cell-middle w3-white" style={{padding:"0px",}}>
+                            <i className="fa fa-chevron-right w3-text-grey"></i>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </>
     )

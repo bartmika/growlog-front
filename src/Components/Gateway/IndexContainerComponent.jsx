@@ -38,8 +38,8 @@ class IndexContainerComponent extends Component {
                 </div>
                 <br />
                 <br />
-                <span className="w3-bottom w3-center w3-grey">
-                    <a className="w3-button" target="_blank" href="https://github.com">Fork Project on GitHub&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
+                <span className="w3-bottom w3-center w3-red">
+                    <a className="w3-button" target="_blank" href="https://github.com">This is only a prototype - no data is saved! <br />Fork Project on GitHub&nbsp;<i className="fa fa-external-link" aria-hidden="true"></i></a>
                 </span>
             </>
         );
