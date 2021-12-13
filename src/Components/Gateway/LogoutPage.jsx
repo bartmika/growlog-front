@@ -2,7 +2,7 @@ import { React, Component } from "react";
 import { Link } from "react-router-dom";
 
 
-class LogoutContainer extends Component {
+class LogoutPage extends Component {
     constructor(props) {
         super(props);
         this.state = {}
@@ -23,4 +23,4 @@ class LogoutContainer extends Component {
     }
 }
 
-export default LogoutContainer
+export default LogoutPage

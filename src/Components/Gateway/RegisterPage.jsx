@@ -2,7 +2,7 @@ import { React, Component } from "react";
 import { Link } from "react-router-dom";
 
 
-class RegisterContainerComponent extends Component {
+class RegisterPage extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -26,32 +26,34 @@ class RegisterContainerComponent extends Component {
                         </Link>
                     </div>
                     <div className="w3-panel">
-                        <div className="w3-container w3-white w3-round-xlarge">
+                        <div className="w3-container">
                             <h1><strong><i className="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Register</strong></h1>
-                            <hr className="w3-black" />
+                        </div>
+                        <div className="w3-container w3-white w3-round-xlarge w3-border w3-border-grey">
+                            <br />
                             <p>The fields with astricks (*) are required.</p>
                             <p>
-                                <label>Email (*)</label>
+                                <label><strong>Email (*)</strong></label>
                                 <input class="w3-input" type="text" />
                             </p>
 
                             <p>
-                                <label>Password (*)</label>
+                                <label><strong>Password (*)</strong></label>
                                 <input class="w3-input" type="password" />
                             </p>
 
                             <p>
-                                <label>First Name (*)</label>
+                                <label><strong>First Name (*)</strong></label>
                                 <input class="w3-input" type="text" />
                             </p>
 
                             <p>
-                                <label>Last Name (*)</label>
+                                <label><strong>Last Name (*)</strong></label>
                                 <input class="w3-input" type="text" />
                             </p>
 
                             <p>
-                            <button className="w3-button w3-block w3-blue" onClick={this.onRegisterClick}>Register</button>
+                            <button className="w3-button w3-block w3-blue w3-round-xlarge w3-padding-16" onClick={this.onRegisterClick}>Register</button>
                             </p>
                             <span className="w3-block">
                                 <p>Already have an account? <Link to="/login">Click here</Link> to login now.</p>
@@ -64,4 +66,4 @@ class RegisterContainerComponent extends Component {
     }
 }
 
-export default RegisterContainerComponent
+export default RegisterPage

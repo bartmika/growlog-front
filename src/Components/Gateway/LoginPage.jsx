@@ -2,7 +2,7 @@ import { React, Component } from "react";
 import { Link } from "react-router-dom";
 
 
-class LoginContainerComponent extends Component {
+class LoginPage extends Component {
     constructor(props) {
         super(props);
         this.state = {}
@@ -26,17 +26,28 @@ class LoginContainerComponent extends Component {
                         </Link>
                     </div>
                     <div className="w3-panel">
-                        <div className="w3-container w3-white w3-round-xlarge">
+                        <div className="w3-container">
                             <h1><strong><i className="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Login</strong></h1>
-                            <hr className="w3-black" />
-                            <label>Email</label>
+                        </div>
+                        <div className="w3-container w3-white w3-round-xlarge w3-border w3-border-grey">
+                            <br />
+                            <p>
+                            <label><strong>Email</strong></label>
                             <input class="w3-input" type="text" />
-                            <label>Password</label>
+                            </p>
+
+                            <p>
+                            <label><strong>Password</strong></label>
                             <input class="w3-input" type="text" />
-                            <button className="w3-button w3-block w3-blue" onClick={this.onLoginClick}>Login</button>
-                            <span className="w3-block">
+                            </p>
+
+                            <p>
+                                <button className="w3-button w3-block w3-blue w3-round-xlarge w3-padding-16" onClick={this.onLoginClick}>Login</button>
+                            </p>
+
+                            <p className="w3-block">
                                 <p>Don't have an account? <Link to="/register">Click here</Link> to register a new account!</p>
-                            </span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -45,4 +56,4 @@ class LoginContainerComponent extends Component {
     }
 }
 
-export default LoginContainerComponent
+export default LoginPage

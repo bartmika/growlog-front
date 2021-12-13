@@ -14,10 +14,10 @@ import ProductsListContainer from "./Components/Products/List/Container";
 import ProductCreateStepOnePage from "./Components/Products/Create/StepOnePage";
 import DashboardContainer from "./Components/Dashboard/Container";
 import RegisterSuccessContainer from "./Components/Gateway/RegisterSuccessContainer";
-import RegisterContainerComponent from "./Components/Gateway/RegisterContainerComponent";
-import LogoutContainer from "./Components/Gateway/LogoutContainer";
-import LoginContainerComponent from "./Components/Gateway/LoginContainerComponent";
-import IndexContainerComponent from "./Components/Gateway/IndexContainerComponent";
+import RegisterPage from "./Components/Gateway/RegisterPage";
+import LogoutPage from "./Components/Gateway/LogoutPage";
+import LoginPage from "./Components/Gateway/LoginPage";
+import IndexPage from "./Components/Gateway/IndexPage";
 import NotFoundPage from "./Components/Misc/NotFoundPage";
 import MobileTabletNavigationContainer from "./Components/Misc/MobileTabletNavigationContainer";
 
@@ -39,10 +39,10 @@ class App extends Component {
                         <Route exact path="/products" element={<ProductsListContainer/>}/>
                         <Route exact path="/dashboard" element={<DashboardContainer/>}/>
                         <Route exact path="/register-success" element={<RegisterSuccessContainer/>}/>
-                        <Route exact path="/register" element={<RegisterContainerComponent/>}/>
-                        <Route exact path="/login" element={<LoginContainerComponent/>}/>
-                        <Route exact path="/logout" element={<LogoutContainer/>}/>
-                        <Route exact path="/" element={<IndexContainerComponent/>}/>
+                        <Route exact path="/register" element={<RegisterPage/>}/>
+                        <Route exact path="/login" element={<LoginPage/>}/>
+                        <Route exact path="/logout" element={<LogoutPage/>}/>
+                        <Route exact path="/" element={<IndexPage/>}/>
                         <Route path="*" element={<NotFoundPage/>}/>
                     </Routes>
                     <div>

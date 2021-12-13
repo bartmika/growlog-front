@@ -97,6 +97,10 @@ export default function ProductCreateStepOnePage(props) {
                                 <label>Outdoors</label>
                             </p>
                             <p>
+                                <input className="w3-radio" type="radio" name="environment" value="greenhouse" />&nbsp;
+                                <label>Greenhouse</label>
+                            </p>
+                            <p>
                                 <label><strong>Type of Growing Method:</strong></label>
                             </p>
                             <p>
@@ -114,6 +118,30 @@ export default function ProductCreateStepOnePage(props) {
                             <p>
                                 <input className="w3-radio" type="radio" name="typeOfGrowing" value="ground soil" />&nbsp;
                                 <label>Ground Soil</label>
+                            </p>
+
+                            <p>
+                                <label><strong>What is the primary purpose for growing?</strong></label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="hydroponics" />&nbsp;
+                                <label>Utility</label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="aquaponics" />&nbsp;
+                                <label>Eatable</label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="potted soil" />&nbsp;
+                                <label>Cultural</label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="ground soil" />&nbsp;
+                                <label>Medicinal</label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="ground soil" />&nbsp;
+                                <label>Experimental</label>
                             </p>
 
                             <p className="w3-margin-top">
