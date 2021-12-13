@@ -34,12 +34,12 @@ export default function ProductCreateStepOnePage(props) {
             </div>
             <div className="w3-hide-large w3-hide-medium">
                 {/* TOP NAVIGATION */}
-                <div className="w3-teal w3-hide-large" >
+                <div className="w3-teal w3-hide-large w3-top" >
                     <div className="w3-row">
                         <div className="w3-col s3 w3-container">
                             <Link to="/products" className="w3-left w3-text-light-grey" style={{ textDecoration: "none"}}>
                                 <h4>
-                                    <i className="fa fa-chevron-left"></i>&nbsp;Back
+                                    <i className="fa fa-chevron-left"></i>
                                 </h4>
                             </Link>
                         </div>
@@ -50,14 +50,15 @@ export default function ProductCreateStepOnePage(props) {
                         </div>
                     </div>
                 </div>
+                <br /><br /><br />
 
                 {/* Submission Form */}
                 <div className="w3-container">
-                    <form className="w3-white">
+                    <form className="w3-white w3-card">
                         <div className="w3-container w3-padding">
-                            <h2>Step 1 of X</h2>
+                            <h3>Step 1 of X</h3>
+                            <hr className="w3-black" />
                             <p>Please fill out all required fields (*).</p>
-                            <h4><i className="fa fa-leaf"></i>&nbsp;<strong>Plant Identity</strong></h4>
                             <p>
                                 <label><strong>Name:</strong></label>
                                 <input className="w3-input" type="text" name="name" placeholder="Please fill name" value={name} onChange={onNameChange} />
@@ -84,22 +85,38 @@ export default function ProductCreateStepOnePage(props) {
                                         onChange={onSpeciesOtherChange} />
                             </p>}
 
-                            <h4><i className="fa fa-home"></i>&nbsp;<strong>Plant Grow Environment</strong></h4>
                             <p>
-                                <label><strong>Growing Environment:</strong></label>
+                                <label><strong>Environment:</strong></label>
                             </p>
-                                <p>
-                                <input className="w3-radio" type="radio" name="gender" value="male" checked />
-                                <label>Male</label></p>
-                                <p>
-                                <input className="w3-radio" type="radio" name="gender" value="female" />
-                                <label>Female</label></p>
-                                <p>
-                                <input className="w3-radio" type="radio" name="gender" value="" disabled />
-                                <label>Don't know (Disabled)</label>
+                            <p>
+                                <input className="w3-radio" type="radio" name="environment" value="indoors" />&nbsp;
+                                <label>Indoors</label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="environment" value="outdoors" />&nbsp;
+                                <label>Outdoors</label>
+                            </p>
+                            <p>
+                                <label><strong>Type of Growing Method:</strong></label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="hydroponics" />&nbsp;
+                                <label>Hydroponics</label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="aquaponics" />&nbsp;
+                                <label>Aquaponics</label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="potted soil" />&nbsp;
+                                <label>Potted Soil</label>
+                            </p>
+                            <p>
+                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="ground soil" />&nbsp;
+                                <label>Ground Soil</label>
                             </p>
 
-                            <p>
+                            <p className="w3-margin-top">
                                 <Link className="w3-button w3-red w3-left" to="/products"><i className="fa fa-times-circle"></i>&nbsp;Cancel</Link>
                                 <button className="w3-button w3-blue w3-right" type="button" onClick={onNextClick}>Next&nbsp;<i className="fa fa-chevron-circle-right"></i></button>
                             </p>
