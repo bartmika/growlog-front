@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Select from 'react-select'
-import { SPECIES_SELECT_FIELD_OPTIONS } from "../../../Constants/SelectFieldOptions";
+import { SPECIES_SELECT_FIELD_OPTIONS, PRIMARY_GROWING_PURPOSE_SELECT_FIELD_OPTIONS } from "../../../Constants/SelectFieldOptions";
 
 
 export default function ProductCreateStepOnePage(props) {
@@ -9,6 +9,7 @@ export default function ProductCreateStepOnePage(props) {
     const [speciesSelectedOption, setSpeciesSelectedOption] = useState("");
     const [isSpeciesOther, setIsSpeciesOther] = useState(false);
     const [speciesOther, setSpeciesOther] = useState("");
+    const [primaryGrowingPurpose, setPrimaryGrowingPurpose] = useState("");
 
     function onSpeciesSingleSelectChange(selectedOption) {
         setSpeciesSelectedOption(selectedOption);
@@ -21,6 +22,10 @@ export default function ProductCreateStepOnePage(props) {
 
     function onSpeciesOtherChange(e) {
         setSpeciesOther(e.target.value);
+    }
+
+    function onSetPrimaryGrowingPurpose(selectedOption) {
+        setPrimaryGrowingPurpose(selectedOption);
     }
 
     function onNextClick(e) {
@@ -54,17 +59,26 @@ export default function ProductCreateStepOnePage(props) {
 
                 {/* Submission Form */}
                 <div className="w3-container">
-                    <form className="w3-white w3-card">
+                <h3><strong>Step 1 of 3</strong></h3>
+                    <form className="w3-white w3-card w3-round-xlarge">
                         <div className="w3-container w3-padding">
-                            <h3>Step 1 of X</h3>
-                            <hr className="w3-black" />
+
                             <p>Please fill out all required fields (*).</p>
-                            <p>
+                            <p className="w3-margin-bottom">
+                                <label><strong>What is the primary purpose for growing this plant? (*)</strong></label>
+                                <Select options={PRIMARY_GROWING_PURPOSE_SELECT_FIELD_OPTIONS}
+                                       onChange={onSetPrimaryGrowingPurpose}
+                                           name="primaryGrowingPurpose"
+                                          value={primaryGrowingPurpose}
+                                    placeholder="Please select purpose"
+                                 />
+                                <label className="w3-text-grey w3-small">Please select only one option.</label>
+                            </p>
+                            <p className="w3-margin-bottom">
                                 <label><strong>Name:</strong></label>
                                 <input className="w3-input" type="text" name="name" placeholder="Please fill name" value={name} onChange={onNameChange} />
-                                <label className="w3-text-grey w3-small">Name is the name you will use internally to identify this plant. If you don't specify this field then a default name will be provided by the system.</label>
                             </p>
-                            <p>
+                            <p className="w3-margin-bottom">
                                 <label><strong>Species (*):</strong></label>
                                 <Select options={SPECIES_SELECT_FIELD_OPTIONS}
                                        onChange={onSpeciesSingleSelectChange}
@@ -74,7 +88,7 @@ export default function ProductCreateStepOnePage(props) {
                                  />
                                 <label className="w3-text-grey w3-small">Choose "Other" if you cannot find your plant species.</label>
                             </p>
-                            {isSpeciesOther && <p>
+                            {isSpeciesOther && <p className="w3-margin-bottom">
                                 <label><strong>Specifies Other (*):</strong></label>
                                 <input className="w3-input"
                                             type="text"
@@ -84,72 +98,42 @@ export default function ProductCreateStepOnePage(props) {
                                            value={speciesOther}
                                         onChange={onSpeciesOtherChange} />
                             </p>}
-
-                            <p>
-                                <label><strong>Environment:</strong></label>
-                            </p>
-                            <p>
+                            <p className="w3-margin-bottom">
+                                <label><strong>Environment (*):</strong></label>
+                                <br />
                                 <input className="w3-radio" type="radio" name="environment" value="indoors" />&nbsp;
                                 <label>Indoors</label>
-                            </p>
-                            <p>
+                                <br />
                                 <input className="w3-radio" type="radio" name="environment" value="outdoors" />&nbsp;
                                 <label>Outdoors</label>
-                            </p>
-                            <p>
+                                <br />
                                 <input className="w3-radio" type="radio" name="environment" value="greenhouse" />&nbsp;
                                 <label>Greenhouse</label>
                             </p>
-                            <p>
-                                <label><strong>Type of Growing Method:</strong></label>
-                            </p>
-                            <p>
+                            <p className="w3-margin-bottom">
+                                <label><strong>Type of Growing Method (*):</strong></label>
+                                <br />
                                 <input className="w3-radio" type="radio" name="typeOfGrowing" value="hydroponics" />&nbsp;
                                 <label>Hydroponics</label>
-                            </p>
-                            <p>
+                                <br />
                                 <input className="w3-radio" type="radio" name="typeOfGrowing" value="aquaponics" />&nbsp;
                                 <label>Aquaponics</label>
-                            </p>
-                            <p>
+                                <br />
                                 <input className="w3-radio" type="radio" name="typeOfGrowing" value="potted soil" />&nbsp;
                                 <label>Potted Soil</label>
-                            </p>
-                            <p>
+                                <br />
                                 <input className="w3-radio" type="radio" name="typeOfGrowing" value="ground soil" />&nbsp;
                                 <label>Ground Soil</label>
                             </p>
 
-                            <p>
-                                <label><strong>What is the primary purpose for growing?</strong></label>
-                            </p>
-                            <p>
-                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="hydroponics" />&nbsp;
-                                <label>Utility</label>
-                            </p>
-                            <p>
-                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="aquaponics" />&nbsp;
-                                <label>Eatable</label>
-                            </p>
-                            <p>
-                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="potted soil" />&nbsp;
-                                <label>Cultural</label>
-                            </p>
-                            <p>
-                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="ground soil" />&nbsp;
-                                <label>Medicinal</label>
-                            </p>
-                            <p>
-                                <input className="w3-radio" type="radio" name="typeOfGrowing" value="ground soil" />&nbsp;
-                                <label>Experimental</label>
-                            </p>
-
                             <p className="w3-margin-top">
-                                <Link className="w3-button w3-red w3-left" to="/products"><i className="fa fa-times-circle"></i>&nbsp;Cancel</Link>
-                                <button className="w3-button w3-blue w3-right" type="button" onClick={onNextClick}>Next&nbsp;<i className="fa fa-chevron-circle-right"></i></button>
+                                <Link className="w3-button w3-red w3-left w3-round-xlarge" to="/products"><i className="fa fa-times-circle"></i>&nbsp;Cancel</Link>
+                                <button className="w3-button w3-blue w3-right w3-round-xlarge" type="button" onClick={onNextClick}>Next&nbsp;<i className="fa fa-chevron-circle-right"></i></button>
                             </p>
                         </div>
                     </form>
+                    <br />
+                    <br />
                 </div>
             </div>
         </>
