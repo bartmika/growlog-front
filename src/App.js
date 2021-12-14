@@ -12,6 +12,8 @@ import DevicesListContainer from "./Components/Devices/List/Container";
 import ProductsDetailContainer from "./Components/Products/Detail/Container";
 import ProductListPage from "./Components/Products/List/ProductListPage";
 import ProductCreateStepOnePage from "./Components/Products/Create/StepOnePage";
+import BatchCreatePage from "./Components/Batch/BatchCreatePage";
+import BatchListPage from "./Components/Batch/BatchListPage";
 import DashboardContainer from "./Components/Dashboard/Container";
 import RegisterSuccessContainer from "./Components/Gateway/RegisterSuccessContainer";
 import RegisterPage from "./Components/Gateway/RegisterPage";
@@ -37,6 +39,8 @@ class App extends Component {
                         <Route exact path="/product/:id" element={<ProductsDetailContainer/>}/>
                         <Route exact path="/products/add-1" element={<ProductCreateStepOnePage/>}/>
                         <Route exact path="/products" element={<ProductListPage/>}/>
+                        <Route exact path="/batches/add" element={<BatchCreatePage/>}/>
+                        <Route exact path="/batches" element={<BatchListPage/>}/>
                         <Route exact path="/dashboard" element={<DashboardContainer/>}/>
                         <Route exact path="/register-success" element={<RegisterSuccessContainer/>}/>
                         <Route exact path="/register" element={<RegisterPage/>}/>

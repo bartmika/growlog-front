@@ -36,9 +36,9 @@ export default function MobileTabletNavigationContainer(props) {
                             <i className={`fa fa-tachometer w3-large`}></i><br /><span className="w3-small">Dashboard</span>
                         </Link>
                     </div>
-                    <div className={`w3-bar-item w3-center ${basePath.includes("product") && !isMoreClicked ? "w3-text-blue" : ""}`} style={{width:"25%"}}>
-                        <Link to={isMoreClicked ? "#" : "/products"} style={{ textDecoration: "none"}}>
-                            <i className={`fa fa-cubes w3-large`}></i><br /><span className="w3-small">Products</span>
+                    <div className={`w3-bar-item w3-center ${basePath.includes("batch") && !isMoreClicked ? "w3-text-blue" : ""}`} style={{width:"25%"}}>
+                        <Link to={isMoreClicked ? "#" : "/batches"} style={{ textDecoration: "none"}}>
+                            <i className={`fa fa-cubes w3-large`}></i><br /><span className="w3-small">Batches</span>
                         </Link>
                     </div>
                     <div className={`w3-bar-item w3-center ${basePath.includes("device") && !isMoreClicked ? "w3-text-blue" : ""}`} style={{width:"25%"}}>
