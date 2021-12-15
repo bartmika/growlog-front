@@ -24,7 +24,7 @@ function BatchListPage(props) {
                             <h4>Batches</h4>
                         </div>
                         <div className="w3-col s4 w3-container ">
-                            <Link to="/batches/add" className="w3-right" style={{ textDecoration: "none"}}>
+                            <Link to="/batches/add-step-1" className="w3-right" style={{ textDecoration: "none"}}>
                                 <h4>
                                     <i className="fa fa-plus"></i>&nbsp;Add
                                 </h4>
