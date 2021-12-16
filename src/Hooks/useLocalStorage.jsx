@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 /*
- * Code taken from: https://usehooks.com/useLocalStorage/
+ * Code modified taken from: https://usehooks.com/useLocalStorage/
  */
-function useLocalStorage(key, initialValue) {
+export default function useLocalStorage(key, initialValue) {
     // State to store our value
     // Pass initial state function to useState so logic is only executed once
     const [storedValue, setStoredValue] = useState(() => {
@@ -13,9 +13,16 @@ function useLocalStorage(key, initialValue) {
             // Parse stored json or if none return initialValue
             return item ? JSON.parse(item) : initialValue;
         } catch (error) {
-            // If error also return initialValue
-            console.log(error);
-            return initialValue;
+            try {
+                // Get from local storage by key
+                const item = window.localStorage.getItem(key);
+                // Parse stored json or if none return initialValue
+                return item ? item : initialValue;
+            } catch (error2) {
+                // If error also return initialValue
+                console.log(error2);
+                return initialValue;
+            }
         }
     });
     // Return a wrapped version of useState's setter function that ...
